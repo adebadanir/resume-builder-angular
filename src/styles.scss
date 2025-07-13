@@ -6,6 +6,36 @@
   padding: 0;
 }
 
-li {
+.list-no-style {
   list-style: none;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+p {
+  text-align: justify;
+}
+
+.text-xl {
+  font-size: 20px;
+}
+
+.text-lg {
+  font-size: 14.6px;
+}
+
+.text-small {
+  font-size: 13.3px;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-between {
+  @include flex-between;
 }

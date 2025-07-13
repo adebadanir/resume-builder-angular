@@ -1,0 +1,29 @@
+<section class="">
+    <h2 class="label text-lg border-bottom">{{ label }}</h2>
+    @for (data of sectionData; track $index) {
+        @if (data){
+            <p class="text-small ">
+                {{ data.content }}
+            </p>
+        }
+        @if (data.places){        
+            <div class="flex-between">
+                <h2 class="text-small">{{ data.places.place }}</h2>
+                <p class="text-small ">{{ data.places.address }}</p>
+            </div>
+        }
+        @if (data.position) {
+            <div class="flex-between text-bold">
+                <p class="text-small">{{ data.position.position }}</p>
+                <p class="text-small">{{ data.position.duration }}</p>
+            </div>
+        }
+        @if (data.list) {
+            <ul class="list text-small pb-1">
+                @for (item of data.list; track $index) {
+                    <li><p>{{ item }}</p></li>
+                }
+            </ul>
+        }
+    }
+</section>

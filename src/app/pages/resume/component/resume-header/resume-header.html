@@ -1,8 +1,8 @@
 <div class="resume-header">
-  <h1>{{ dummy.name }}</h1>
+  <h1 class="text-xl">{{ dummy.name }}</h1>
   <ul class="contact-information text-small">
     @for (item of dummy.info; track $index) {
-    <li>
+    <li class="list-no-style">
         @if (item.isLink) {
         <a [href]="item.data">{{ item.label }}</a>
         } @else {

@@ -1,0 +1,19 @@
+.list {
+    padding-left: 24px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+@for $i from 1 through 5 {
+  .pb-#{$i} {
+    padding-bottom: #{4px * $i};
+  }
+}
+

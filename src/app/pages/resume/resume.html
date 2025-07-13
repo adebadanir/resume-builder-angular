@@ -2,6 +2,9 @@
   <section class="preview-section">
     <div class="resume-preview">
       <app-resume-header />
+      @for (data of dummy; track $index) {
+        <app-resume-section [label]="dummy[$index].label" [sectionData]="dummy[$index].data"/>
+      }
     </div>
   </section>
 </div>
